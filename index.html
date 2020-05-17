@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>色変え</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <div class="buttons">
+            <div class="conf">
+                <button id="changeMode"><span class="selected">ランダムモード</span><br>←→<br><span>設定モード</span></button>
+                <button id="changeColor">色切り替え</button>
+                <button id="reset">リセット</button>
+            </div>
+            <button id='start'>スタート！！</button>
+        </div>
+        <div class='container'>
+            <button id='btn-1' class='sakura' data-btn="1"></button>
+            <button id='btn-2' class='sakura' data-btn="2"></button>
+            <button id='btn-3' class='sakura' data-btn="3"></button>
+            <button id='btn-5' class='sakura' data-btn="5"></button>
+            <button id='btn-6' class='sakura' data-btn="6"></button>
+            <button id='btn-7' class='sakura' data-btn="7"></button>
+            <button id='btn-9' class='sakura' data-btn="9"></button>
+            <button id='btn-10' class='sakura' data-btn="10"></button>
+            <button id='btn-11' class='sakura' data-btn="11"></button>
+        </div>
+        <div class="text">
+            <span>@遊び方@</span><br>
+            1.スタートを押します<br>
+            2.ランダムで緑のパネルが現れます<br>
+            3.パネルを押すと、そのパネル+隣接したパネルの色が緑←→桜で入れ替わります<br>
+            4.全てのパネルが桜色になればクリア<br>(*´∇｀*)<br><br>
+
+            ※立体的にしたせいか、二段目と三段目の上のあたりが反応しません。真ん中を押してください。
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+        <script src="function.js"></script>
+    </body>
+</html>
