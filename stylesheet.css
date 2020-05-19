@@ -39,6 +39,9 @@ body {
   background-color: lightcyan;
   font-size: 24px;
 }
+.buttons .Random {
+  font-weight: bold;
+}
 
 .container {
   position: relative;
