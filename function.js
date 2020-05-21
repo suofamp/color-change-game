@@ -23,18 +23,8 @@ var stop = $("#stop");
 
 function check(){
     if(!$('button').hasClass(cColor[colorFlag])){
-        
         mid += (new Date() - now)/1000;
         clearInterval(count);
-        toggle();
-        
-        $('.container button').removeClass();
-        $('.container button').addClass(color[0]);
-        $('#changeColor').css('color',tColor[0]);
-        $('.'+tWeight[0]).css('font-weight','bold');
-        $('.'+tWeight[1]).css('font-weight','normal');
-        colorFlag = 0;
-        modeFlag = 0;
         startFlag = 0;
     }
 }
@@ -62,7 +52,8 @@ $('.container button').click(function(){
 $('#start').click(function(){
     if(startFlag == 0){
         startFlag = 1;
-        
+        $('#start').css('display','none');
+        $('#timer').css('display','block');
         now = new Date(); //現在時刻
         count = setInterval(counter, 10);
         
@@ -102,6 +93,8 @@ $('#reset').click(function(){
     colorFlag = 0;
     modeFlag = 0;
     startFlag = 0;
+    $('#start').css('display','block');
+    $('#timer').css('display','none');
     
     mid += (new Date() - now)/1000;
     clearInterval(count);
@@ -131,4 +124,7 @@ function counter(){
     }
     min.html(min_time);
 };
-
+/*
+$('.howTow').click(function(){
+    $('.text').toggleClass('active');
+});*/
