@@ -222,16 +222,45 @@ body {
   font-size: 24px;
 }
 
-.text {
-  position: fixed;
-  bottom: 0;
-  width: 300px;
+#text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   display: none;
-}
-.text span {
-  font-size: 24px;
+  background-color: lightcyan;
 }
 
-.text.active {
+#text.active {
   display: block;
+}
+
+#hikarin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: none;
+}
+#hikarin p {
+  height: 124px;
+  font-family: Comic Sans MS;
+  line-height: 124px;
+  text-align: center;
+  color: lightpink;
+  font-size: 48px;
+}
+#hikarin img {
+  width: 100%;
+}
+#hikarin .name {
+  font-size: 12px;
+  font-family: sans-serif;
+  height: 16px;
+  text-align: right;
+  line-height: 16px;
+  color: black;
 }

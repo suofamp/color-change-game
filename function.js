@@ -25,6 +25,9 @@ function check(){
     if(!$('button').hasClass(cColor[colorFlag])){
         mid += (new Date() - now)/1000;
         clearInterval(count);
+        if(colorFlag == 0){
+            $('#hikarin').css('display','block');
+        }
         startFlag = 0;
     }
 }
@@ -51,6 +54,7 @@ $('.container button').click(function(){
 
 $('#start').click(function(){
     if(startFlag == 0){
+        $('#text').removeClass('active');
         startFlag = 1;
         $('#start').css('display','none');
         $('#timer').css('display','block');
@@ -86,13 +90,13 @@ $('#changeMode').click(function(){
 
 $('#reset').click(function(){
     $('.container button').removeClass();
-    $('.container button').addClass(color[0]);
-    $('#changeColor').css('color',tColor[0]);
+    $('.container button').addClass(color[colorFlag]);
+    $('#changeColor').css('color',tColor[colorFlag]);
     $('.'+tWeight[0]).css('font-weight','bold');
     $('.'+tWeight[1]).css('font-weight','normal');
-    colorFlag = 0;
     modeFlag = 0;
     startFlag = 0;
+    $('#hikarin').css('display','none');
     $('#start').css('display','block');
     $('#timer').css('display','none');
     
@@ -124,7 +128,9 @@ function counter(){
     }
     min.html(min_time);
 };
-/*
+
 $('.howTow').click(function(){
-    $('.text').toggleClass('active');
-});*/
+    if(startFlag == 0){
+        $('#text').toggleClass('active');
+    }
+});
