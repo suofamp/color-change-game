@@ -232,6 +232,7 @@ body {
   height: 100%;
   display: none;
   background-color: lightcyan;
+  font-size: 14px;
 }
 
 #text.active {
